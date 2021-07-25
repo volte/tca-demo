@@ -8,11 +8,9 @@
 import Foundation
 import ComposableArchitecture
 
-public struct SearchState: Equatable {
-    var storeNumber = 0
+public struct SearchState: Equatable, Codable {
     var query = ""
     var products: [Product] = []
-    var favorites: Set<Product> = []
 }
 
 public enum SearchAction: Equatable {

@@ -13,11 +13,7 @@ struct AppView: View {
                         TextField("Store Number",
                             text: viewStore.binding(
                                 get: { storeNumber in
-                                    if (storeNumber != nil) {
-                                        return String(viewStore.storeNumber)
-                                    } else {
-                                        return ""
-                                    }
+                                    return String(viewStore.storeNumber)
                                 },
                                 send: AppAction.storeNumberChanged
                             )
@@ -31,13 +27,23 @@ struct AppView: View {
                     .tabItem {
                         Text("Store Number \(viewStore.storeNumber)")
                     }
-                FavoritesView(store: self.store.scope(state: \.favorites, action: AppAction.favorites))
+                FavoritesView(store:
+                                self.store.scope(
+                                    state: FavoritesView.State.fromAppState,
+                                    action: { $0.appAction }
+                                )
+                )
                     .tabItem {
                         Text("Favorites \(viewStore.favorites.favorites.count)")
                     }
-                SearchView(store: self.store.scope(state: \.search, action: AppAction.search))
+                SearchView(store:
+                            self.store.scope(
+                                state: SearchView.State.fromAppState,
+                                action: { $0.appAction }
+                            )
+                )
                     .tabItem {
-                        Text("Search \(viewStore.search.storeNumber)")
+                        Text("Search \(viewStore.storeNumber)")
                     }
             }
         }

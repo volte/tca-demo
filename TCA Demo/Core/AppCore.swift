@@ -8,33 +8,15 @@
 import Foundation
 import ComposableArchitecture
 
-public struct AppState: Equatable {
+public struct AppState: Equatable, Codable {
     var storeNumber = 246
-    var favoriteList: Set<Product> = []
-
-    var favorites: FavoritesState {
-        get {
-            .init(favorites: favoriteList)
-        }
-        set {
-            favoriteList = newValue.favorites
-        }
-    }
-    var search: SearchState {
-        get {
-            .init(storeNumber: storeNumber, favorites: favoriteList)
-        }
-        set {
-            storeNumber = newValue.storeNumber
-            favoriteList = newValue.favorites
-        }
-    }
+    var favorites: FavoritesState = .init()
+    var search: SearchState = .init()
 }
 
 public enum AppAction: Equatable {
     case favorites(FavoritesAction)
     case search(SearchAction)
-
     case storeNumberChanged(String)
 }
 
@@ -69,7 +51,7 @@ public let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
         case let .storeNumberChanged(input):
             let number = Int(input)
             if number != nil {
-                state.search.storeNumber = number!
+                state.storeNumber = number!
             }
             return .none
         case .favorites(_):

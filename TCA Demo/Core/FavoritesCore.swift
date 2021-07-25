@@ -1,7 +1,7 @@
 import Foundation
 import ComposableArchitecture
 
-public struct FavoritesState: Equatable {
+public struct FavoritesState: Equatable, Codable {
     var favorites: Set<Product> = []
 }
 

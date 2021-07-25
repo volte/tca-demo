@@ -27,6 +27,8 @@
 		582C8FC2268A3D0900455DC9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C8FC1268A3D0900455DC9 /* SearchView.swift */; };
 		582C8FC7268A3D1A00455DC9 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C8FC6268A3D1A00455DC9 /* FavoritesView.swift */; };
 		A7CFDA0502099055EAC5BEE8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A7CFD39DFBB97628302ABA9E /* .gitignore */; };
+		F4012AC826AD9AF000D13025 /* SearchView+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012AC726AD9AF000D13025 /* SearchView+Integration.swift */; };
+		F4012ACA26AD9BE400D13025 /* FavoritesView+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012AC926AD9BE400D13025 /* FavoritesView+Integration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		582C8FC1268A3D0900455DC9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		582C8FC6268A3D1A00455DC9 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A7CFD39DFBB97628302ABA9E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		F4012AC726AD9AF000D13025 /* SearchView+Integration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+Integration.swift"; sourceTree = "<group>"; };
+		F4012AC926AD9BE400D13025 /* FavoritesView+Integration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesView+Integration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +198,9 @@
 				582C8F3D268796B000455DC9 /* AppView.swift */,
 				582C8F882687F1DA00455DC9 /* RootView.swift */,
 				582C8FC1268A3D0900455DC9 /* SearchView.swift */,
+				F4012AC726AD9AF000D13025 /* SearchView+Integration.swift */,
 				582C8FC6268A3D1A00455DC9 /* FavoritesView.swift */,
+				F4012AC926AD9BE400D13025 /* FavoritesView+Integration.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -356,12 +362,14 @@
 			files = (
 				582C8FA42688F30D00455DC9 /* FavoritesModel.swift in Sources */,
 				582C8F3A268796B000455DC9 /* AppDelegate.swift in Sources */,
+				F4012ACA26AD9BE400D13025 /* FavoritesView+Integration.swift in Sources */,
 				582C8FC7268A3D1A00455DC9 /* FavoritesView.swift in Sources */,
 				582C8F9B2688F2F200455DC9 /* HaystackService.swift in Sources */,
 				582C8FAC2688F33100455DC9 /* ProductModel.swift in Sources */,
 				582C8FC2268A3D0900455DC9 /* SearchView.swift in Sources */,
 				582C8FB42689052600455DC9 /* SearchCore.swift in Sources */,
 				582C8F41268796B000455DC9 /* TCA_Demo.xcdatamodeld in Sources */,
+				F4012AC826AD9AF000D13025 /* SearchView+Integration.swift in Sources */,
 				582C8F892687F1DA00455DC9 /* RootView.swift in Sources */,
 				582C8F3C268796B000455DC9 /* SceneDelegate.swift in Sources */,
 				582C8F932688F2D600455DC9 /* FavoritesCore.swift in Sources */,

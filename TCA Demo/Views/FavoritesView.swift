@@ -9,13 +9,23 @@ import SwiftUI
 import ComposableArchitecture
 
 struct FavoritesView: View {
-    let store: Store<FavoritesState, FavoritesAction>
+    struct State: Equatable {
+        var storeNumber: Int
+        var favorites: Set<Product> = []
+    }
+    
+    enum Action {
+    }
+    
+    let store: Store<State, Action>
 
-    public init(store: Store<FavoritesState, FavoritesAction>) {
+    public init(store: Store<State, Action>) {
         self.store = store
     }
 
     var body: some View {
-        Text("Favorites")
+        WithViewStore(store) { viewStore in
+            Text("Store number in FavoritesView: \(viewStore.storeNumber)")
+        }
     }
 }
